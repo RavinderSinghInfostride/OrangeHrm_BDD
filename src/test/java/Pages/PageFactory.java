@@ -6,6 +6,7 @@ public class PageFactory {
     WebDriver driver;
 
     private LoginPage loginPage;
+    private EmployeeTrackerPage employeeTrackerPage;
 
     public PageFactory(WebDriver driver) {
         this.driver = driver;
@@ -16,5 +17,12 @@ public class PageFactory {
             loginPage = new LoginPage(driver);
         }
         return loginPage;
+    }
+
+    public EmployeeTrackerPage getEmployeeTrackerPage() {
+        if (employeeTrackerPage == null) {
+            employeeTrackerPage = new EmployeeTrackerPage(driver);
+        }
+        return employeeTrackerPage;
     }
 }

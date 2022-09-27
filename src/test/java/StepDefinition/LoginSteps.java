@@ -24,8 +24,7 @@ public class LoginSteps extends BaseClass {
     }
 
     @Then("browser closes")
-    public void browser_closes()
-    {
+    public void browser_closes() {
         close_browser();
     }
 }
